@@ -3,7 +3,7 @@ import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
 import { createPinia } from 'pinia'
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
 import VueApexCharts from 'vue-apexcharts'
-import { ZiggyVue } from '../../vendor/tightenco/ziggy'
+import { ZiggyVue } from 'ziggy-js'
 import '../css/app.css'
 
 const pinia = createPinia()

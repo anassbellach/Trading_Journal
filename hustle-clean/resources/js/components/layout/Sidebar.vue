@@ -5,7 +5,7 @@ import { storeToRefs } from 'pinia'
 import { useUiStore } from '@/stores/ui'
 import { useAuthStore } from '@/stores/auth'
 import {
-    SquaresIcon,
+    Squares2X2Icon,
     BookOpenIcon,
     ChartBarIcon,
     CalendarDaysIcon,
@@ -27,7 +27,7 @@ const { sidebarOpen, mobileSidebarOpen } = storeToRefs(ui)
 const unreadInsights = computed(() => page.props.unread_insights ?? 0)
 
 const navItems = computed(() => [
-    { label: 'Dashboard',   href: route('dashboard'),          icon: SquaresIcon,     name: 'dashboard' },
+    { label: 'Dashboard',   href: route('dashboard'),          icon: Squares2X2Icon,     name: 'dashboard' },
     { label: 'Journal',     href: route('journal.index'),      icon: BookOpenIcon,    name: 'journal' },
     { label: 'Analytics',   href: route('analytics.index'),    icon: ChartBarIcon,    name: 'analytics' },
     { label: 'Calendar',    href: route('calendar.index'),     icon: CalendarDaysIcon,name: 'calendar' },

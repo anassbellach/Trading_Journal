@@ -290,6 +290,7 @@ export interface TradeFilters {
 // ─── Inertia Shared Props ────────────────────────────────────────────────────
 
 export interface SharedData {
+    [key: string]: unknown
     auth: {
         user: User | null
     }

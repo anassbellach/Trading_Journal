@@ -24,7 +24,7 @@ export const useTradeStore = defineStore('trade', () => {
 
     function applyFilters(newFilters: Partial<TradeFilters>) {
         filters.value = { ...filters.value, ...newFilters, page: 1 }
-        router.get(route('journal.index'), filters.value as Record<string, unknown>, {
+        router.get(route('journal.index'), filters.value as any, {
             preserveState: true,
             replace: true,
         })

@@ -67,7 +67,7 @@ return new class extends Migration {
         // Add subscription plan to users
         Schema::table('users', function (Blueprint $table) {
             $table->enum('subscription_plan', ['free', 'pro', 'premium'])->default('free')->after('email');
-            $table->string('active_account_id')->nullable()->after('subscription_plan');
+            $table->foreignId('active_account_id')->nullable()->after('subscription_plan')->constrained('accounts')->nullOnDelete();
             $table->string('avatar')->nullable()->after('active_account_id');
             $table->string('google_id')->nullable()->after('avatar');
             $table->string('timezone', 50)->default('UTC')->after('google_id');
